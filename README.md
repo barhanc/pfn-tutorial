@@ -33,7 +33,7 @@ uv run jupyter notebook
 
 Alternatively, open the notebook in one click using [Google Colab](https://colab.research.google.com/github/barhanc/pfn-tutorial/blob/main/pfn-tutorial.ipynb).
 
-## Key References
+## References
 
 - **Prior-data Fitted Networks**: Müller et al., *"Transformers Can Do Bayesian Inference"*, ICLR 2022. [[arXiv:2112.10510](https://arxiv.org/abs/2112.10510)]
 - **TabPFN**: Hollmann et al., *"TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second"*, Nature 2025 / ICLR 2023. [[arXiv:2207.01848](https://arxiv.org/abs/2207.01848)]
