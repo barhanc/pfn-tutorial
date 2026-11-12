@@ -11,52 +11,12 @@ An intuitive, hands-on tutorial and PyTorch implementation of **Prior-data Fitte
 
 ---
 
-## 💡 What are Prior-data Fitted Networks?
-
-Traditional machine learning algorithms optimize parameters $\theta$ by performing gradient descent directly on a training dataset $D = \{(\mathbf{x}_i, y_i)\}_{i=1}^n$. 
-
-**Prior-data Fitted Networks (PFNs)** fundamentally reframe supervised learning:
-Instead of training on a specific dataset at inference time, a Transformer is pre-trained on millions of synthetic datasets sampled from a broad prior distribution $p(D)$. In a single forward pass, the model performs **in-context Bayesian posterior approximation**:
-
-$$q_\theta(y \mid \mathbf{x}, D) \approx p(y \mid \mathbf{x}, D)$$
-
-At test time, the network makes predictions on unseen datasets in fractions of a second with **zero gradient steps**, hyperparameter tuning, or cross-validation.
-
-<p align="center">
-  <img src="./figs/pfn_diagram.png" alt="PFN Architecture Diagram" width="85%" />
-</p>
-
----
-
 ## 📑 Overview
 
 | Notebook | Description | Target Audience |
 | :--- | :--- | :--- |
 | [**`pfn-tutorial.ipynb`**](./pfn-tutorial.ipynb) | Complete tutorial with theoretical background, full PyTorch implementation, training loop, and evaluation. | Self-study, reference, and experimentation. |
 | [**`pfn-tutorial-empty.ipynb`**](./pfn-tutorial-empty.ipynb) | Exercise version containing empty implementation blocks (`Zadanie 1–3`) and guided instructions. | Classroom labs and hands-on workshops. |
-
----
-
-## 🔬 Hands-On Curriculum
-
-### 1. Transformer Architecture for Tabular Data
-- Constructing an **Encoder-Decoder Transformer** tailored for dataset handling:
-  - **Encoder**: Encodes the labeled support set $D_{\text{train}} = \{(\mathbf{x}_i, y_i)\}_{i=1}^n$ into permutation-invariant dataset representations using joint input-target linear projections.
-  - **Decoder**: Receives query features $\mathbf{x}_{\text{test}}$ and attends to the encoded support set via cross-attention to output predictive distributions.
-
-### 2. Prior-Data Generation & Meta-Training
-- Sampling synthetic classification tasks on-the-fly using mixture Gaussian and non-linear classification priors (`scikit-learn` dataset generators).
-- Meta-training the Transformer end-to-end using negative log-likelihood (cross-entropy) over the query batch:
-
-$$\mathcal{L}(\theta) = - \mathbb{E}_{D \sim p(D)} \left[ \sum_{(\mathbf{x}, y) \in D_{\text{test}}} \log q_\theta(y \mid \mathbf{x}, D_{\text{train}}) \right]$$
-
-### 3. In-Context Evaluation & Benchmarking
-- Evaluating the trained PFN on novel tasks sampled from the prior.
-- Direct performance and speed comparison against traditional supervised neural networks trained per-dataset from scratch with Adam/SGD.
-
-<p align="center">
-  <img src="./figs/tab_pfn.png" alt="TabPFN Comparison" width="80%" />
-</p>
 
 ---
 
