@@ -11,15 +11,6 @@ An intuitive, hands-on tutorial and PyTorch implementation of **Prior-data Fitte
 
 ---
 
-## 📑 Overview
-
-| Notebook | Description | Target Audience |
-| :--- | :--- | :--- |
-| [**`pfn-tutorial.ipynb`**](./pfn-tutorial.ipynb) | Complete tutorial with theoretical background, full PyTorch implementation, training loop, and evaluation. | Self-study, reference, and experimentation. |
-| [**`pfn-tutorial-empty.ipynb`**](./pfn-tutorial-empty.ipynb) | Exercise version containing empty implementation blocks (`Zadanie 1–3`) and guided instructions. | Classroom labs and hands-on workshops. |
-
----
-
 ## 🚀 Getting Started
 
 Ensure you have [uv](https://docs.astral.sh/uv/) installed.
