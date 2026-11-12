@@ -2,14 +2,9 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/barhanc/pfn-tutorial/blob/main/pfn-tutorial.ipynb)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
-[![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-EE4C2C.svg?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?style=flat&logo=Jupyter&logoColor=white)](https://jupyter.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
 An intuitive, hands-on tutorial and PyTorch implementation of **Prior-data Fitted Networks (PFNs)** — the breakthrough meta-learning framework powering foundational tabular models like **TabPFN**.
-
----
 
 ## Getting Started
 
@@ -36,8 +31,6 @@ uv run jupyter notebook
 ```
 
 Alternatively, open the notebook in one click using [Google Colab](https://colab.research.google.com/github/barhanc/pfn-tutorial/blob/main/pfn-tutorial.ipynb).
-
----
 
 ## Key References
 
