@@ -1,0 +1,10 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Jupyter Notebook
+**/.ipynb_checkpoints
+
+# VS Code / IDE
+.vscode/
+.idea/

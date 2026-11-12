@@ -1,0 +1,28 @@
+[project]
+name = "pfn-tutorial"
+version = "0.1.0"
+description = "Hands-on tutorial on Prior-Data Fitted Networks (PFNs) and In-Context Meta-Learning with PyTorch"
+authors = [
+    { name = "Bartosz Hanc", email = "bartosz.hanc02@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "jupyter>=1.0.0",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "torch>=2.2",
+    "tqdm>=4.66",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
